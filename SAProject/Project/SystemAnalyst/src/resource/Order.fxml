@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.OrderController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="700.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/blur-bg-3.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="identity" layoutX="63.0" layoutY="63.0" />
+      <Label layoutX="63.0" layoutY="38.0" prefHeight="25.0" prefWidth="130.0" text="Customer Identity :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#23ab0b" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ImageView fx:id="status" fitHeight="25.0" fitWidth="27.0" layoutX="278.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/tickicon.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="statuslabel" layoutX="313.0" layoutY="63.0" prefHeight="25.0" prefWidth="215.0" text="This is new Customer" textFill="#06e821">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="88.0" fitWidth="117.0" layoutX="569.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/customercard.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="cusname" layoutX="63.0" layoutY="123.0" />
+      <Label layoutX="63.0" layoutY="98.0" prefHeight="25.0" prefWidth="130.0" text="Customer Name :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#23ab0b" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="cusphone" layoutX="59.0" layoutY="193.0" />
+      <Label layoutX="59.0" layoutY="168.0" prefHeight="25.0" prefWidth="130.0" text="Customer Phone :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#23ab0b" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="cushos" layoutX="59.0" layoutY="266.0" />
+      <Label layoutX="59.0" layoutY="241.0" prefHeight="25.0" prefWidth="141.0" text="Customer Hospital :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#23ab0b" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TextArea fx:id="address" layoutX="59.0" layoutY="341.0" prefHeight="118.0" prefWidth="419.0" />
+      <Label layoutX="60.0" layoutY="311.0" prefHeight="25.0" prefWidth="130.0" text="Customer Address :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#23ab0b" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="checkstatus" layoutX="217.0" layoutY="63.0" mnemonicParsing="false" onAction="#checkCustomer" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #33CCFF;" text="Check" textFill="#fffdfd">
+         <font>
+            <Font name="Bell MT Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="newcustomer" layoutX="499.0" layoutY="280.0" mnemonicParsing="false" onAction="#addnewCus" prefHeight="86.0" prefWidth="141.0" style="-fx-background-radius: 100;" text="Create New Account">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="orderproduct" layoutX="499.0" layoutY="371.0" mnemonicParsing="false" onAction="#toOrderProductBtn" prefHeight="86.0" prefWidth="141.0" style="-fx-background-radius: 100; -fx-background-color: #66FF33;" text="Order Product">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="warning" layoutX="269.0" layoutY="187.0" prefHeight="37.0" prefWidth="409.0" text="ERROR Please Re input data" textFill="#f50000">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="14.0" layoutY="461.0" onMouseClicked="#toMenuBtn" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/back.png" />
+         </image>
+      </ImageView>
+      <Hyperlink layoutX="39.0" layoutY="462.0" onAction="#toMenuBtn" text="Back" textFill="#110000">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

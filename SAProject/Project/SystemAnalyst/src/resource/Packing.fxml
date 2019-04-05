@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PackingController">
+   <children>
+      <ImageView fitHeight="508.0" fitWidth="706.0" layoutX="-2.0" layoutY="-3.0" opacity="0.4">
+         <image>
+            <Image url="@../Image/hos4.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="identity" layoutX="240.0" layoutY="48.0" />
+      <Button fx:id="check" layoutX="408.0" layoutY="48.0" mnemonicParsing="false" onAction="#checkBtn" text="Check " />
+      <Label fx:id="showmoney" alignment="CENTER" layoutX="196.0" layoutY="88.0" prefHeight="25.0" prefWidth="308.0" text="Money Left : ?????" textFill="#f50202">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="clear" layoutX="298.0" layoutY="125.0" mnemonicParsing="false" onAction="#clearBtn" prefHeight="25.0" prefWidth="52.0" text="Clear" />
+      <TextField fx:id="orderid" layoutX="24.0" layoutY="174.0" prefHeight="25.0" prefWidth="62.0" promptText="Order id" style="-fx-background-radius: 100;" />
+      <Button fx:id="detail" layoutX="105.0" layoutY="174.0" mnemonicParsing="false" onAction="#detailBtn" prefHeight="25.0" prefWidth="62.0" text="detail" />
+      <TableView fx:id="tableView" layoutX="24.0" layoutY="211.0" prefHeight="239.0" prefWidth="377.0">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="212.0" text="Product Name" />
+          <TableColumn fx:id="quantity" prefWidth="66.0" text="Amount" />
+            <TableColumn fx:id="price" prefWidth="98.0" text="Price" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="24.0" layoutY="461.0" onMouseClicked="#BacktoMenuBtn" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/back.png" />
+         </image>
+      </ImageView>
+      <Hyperlink layoutX="45.0" layoutY="462.0" onAction="#BacktoMenuBtn" text="Back" textFill="#111111">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Hyperlink>
+      <Label fx:id="showtotal" alignment="TOP_RIGHT" layoutX="262.0" layoutY="461.0" prefHeight="25.0" prefWidth="139.0" text="Total :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="submit" layoutX="559.0" layoutY="411.0" mnemonicParsing="false" onAction="#SubmitBtn" prefHeight="78.0" prefWidth="110.0" style="-fx-background-radius: 100;" text="Submit" />
+      <ImageView fitHeight="103.0" fitWidth="78.0" layoutX="27.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/Logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="124.0" fitWidth="110.0" layoutX="559.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/docterpad.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="warning" layoutX="420.0" layoutY="320.0" prefHeight="28.0" prefWidth="239.0" text="Label" textFill="#ff0202">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="187.0" layoutY="48.0" prefHeight="25.0" prefWidth="51.0" text="Identity:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
