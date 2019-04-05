@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ShowProductDetailController">
+   <children>
+      <ImageView fitHeight="511.0" fitWidth="727.0" layoutX="1.0" layoutY="-8.0" opacity="0.15">
+         <image>
+            <Image url="@../Image/hos5.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="116.0" layoutX="614.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/heartsound.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="118.0" layoutX="488.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/docterpad.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="30.0" layoutX="32.0" layoutY="450.0" onMouseClicked="#backBtn" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/back.png" />
+         </image>
+      </ImageView>
+      <Hyperlink layoutX="59.0" layoutY="452.0" onAction="#backBtn" text="Back" textFill="#070000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Hyperlink>
+      <ImageView fitHeight="28.0" fitWidth="27.0" layoutX="565.0" layoutY="453.0" onMouseClicked="#toModifiedProductBtn" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/addicon.png" />
+         </image>
+      </ImageView>
+      <Hyperlink layoutX="593.0" layoutY="455.0" onAction="#toModifiedProductBtn" prefHeight="23.0" prefWidth="117.0" text="Modified Product" textFill="#1b0101">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="138.0" layoutY="39.0" text="Name:" />
+      <Label layoutX="123.0" layoutY="115.0" text="Quantity:" />
+      <Label layoutX="143.0" layoutY="66.0" text="Price:" />
+      <Label layoutX="120.0" layoutY="141.0" text="Tube-size:" />
+      <Label layoutX="45.0" layoutY="116.0" />
+      <Label layoutX="133.0" layoutY="168.0" text="Weight:" />
+      <Label layoutX="86.0" layoutY="195.0" text="Body Dimension:" />
+      <Label layoutX="50.0" layoutY="222.0" text="Set-point Temperature:" />
+      <Label layoutX="133.0" layoutY="249.0" text="Display:" />
+      <Label layoutX="126.0" layoutY="275.0" text="Use with:" />
+      <Label layoutX="150.0" layoutY="301.0" text="CPU:" />
+      <Label layoutX="130.0" layoutY="327.0" text="Memory:" />
+      <Label layoutX="117.0" layoutY="353.0" text="Connected:" />
+      <Label layoutX="69.0" layoutY="379.0" text="Power Requirement:" />
+      <Label layoutX="123.0" layoutY="406.0" text="Flow Rate:" />
+      <Label layoutX="93.0" layoutY="432.0" text="Guarantee Year:" />
+      <TextField fx:id="a" layoutX="184.0" layoutY="35.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="b" layoutX="184.0" layoutY="61.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="c" layoutX="184.0" layoutY="87.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="d" layoutX="184.0" layoutY="113.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="e" layoutX="184.0" layoutY="140.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="f" layoutX="184.0" layoutY="167.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="g" layoutX="184.0" layoutY="194.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="h" layoutX="184.0" layoutY="221.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="i" layoutX="184.0" layoutY="247.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="j" layoutX="184.0" layoutY="273.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="k" layoutX="184.0" layoutY="299.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="l" layoutX="184.0" layoutY="325.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="n" layoutX="184.0" layoutY="378.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="m" layoutX="184.0" layoutY="351.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="o" layoutX="184.0" layoutY="404.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="p" layoutX="184.0" layoutY="430.0" prefHeight="25.0" prefWidth="270.0" />
+      <Label layoutX="107.0" layoutY="91.0" text="Supplier ID :" />
+   </children>
+</AnchorPane>

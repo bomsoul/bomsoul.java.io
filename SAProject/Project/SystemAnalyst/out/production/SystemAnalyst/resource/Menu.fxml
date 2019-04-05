@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuController">
+   <children>
+      <ImageView fitHeight="524.0" fitWidth="568.0" layoutX="148.0" layoutY="-24.0">
+         <image>
+            <Image url="@../Image/medicines.jpg" />
+         </image>
+      </ImageView>
+      <Pane prefHeight="500.0" prefWidth="150.0" style="-fx-background-color: #1E90FF;">
+         <children>
+            <Label layoutX="45.0" layoutY="37.0" text="Menu" textFill="#f5f2f2">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="8.0" layoutY="108.0" onMouseClicked="#changeStockProductBtn" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/bag.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="productstock" layoutX="33.0" layoutY="109.0" onAction="#changeStockProductBtn" prefHeight="23.0" prefWidth="113.0" text="Stock &amp; Product" textFill="#f8f4f4">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="8.0" layoutY="136.0" onMouseClicked="#changeOrderBtn" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/folder.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="order" layoutX="33.0" layoutY="137.0" onAction="#changeOrderBtn" prefHeight="23.0" prefWidth="113.0" text="Order" textFill="#f8f4f4">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="6.0" layoutY="458.0" onMouseClicked="#changeLoginBtn" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/logout.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="logout" layoutX="31.0" layoutY="459.0" onAction="#changeLoginBtn" prefHeight="23.0" prefWidth="113.0" text="Log Out" textFill="#f8f4f4">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="6.0" layoutY="161.0" onDragDetected="#changePackingBtn" onMouseClicked="#changeOrderDetailBtn" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/orderdetail.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="order1" layoutX="31.0" layoutY="162.0" onAction="#changePackingBtn" prefHeight="23.0" prefWidth="113.0" text="Packing" textFill="#f8f4f4">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="6.0" layoutY="189.0" onMouseClicked="#toSuplliersBtn" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/supplier.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="order11" layoutX="31.0" layoutY="190.0" onAction="#toSuplliersBtn" prefHeight="23.0" prefWidth="113.0" text="Supplier" textFill="#f8f4f4">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="6.0" layoutY="217.0" onMouseClicked="#changeOrderDetailBtn" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/packed.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="order111" layoutX="31.0" layoutY="218.0" onAction="#changeOrderDetailBtn" prefHeight="23.0" prefWidth="113.0" text="Order Detail" textFill="#f8f4f4">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </Pane>
+      <TextField fx:id="searchbar" layoutX="350.0" layoutY="53.0" promptText="Search by name" style="-fx-background-radius: 100;" />
+      <ImageView fx:id="search" fitHeight="25.0" fitWidth="31.0" layoutX="501.0" layoutY="53.0" onMouseClicked="#searchBtn" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/search.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="refresh" fitHeight="25.0" fitWidth="31.0" layoutX="324.0" layoutY="53.0" onMouseClicked="#refreshBtn" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/refresh.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableView" layoutX="161.0" layoutY="87.0" opacity="0.89" prefHeight="399.0" prefWidth="529.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="Product ID" />
+          <TableColumn fx:id="name" prefWidth="278.0" text="Product Name" />
+            <TableColumn fx:id="quantity" prefWidth="56.0" text="Quantity" />
+            <TableColumn fx:id="price" prefWidth="69.0" text="Price" />
+            <TableColumn fx:id="detail" prefWidth="50.0" text="Detail" />
+        </columns>
+      </TableView>
+      <Label fx:id="title" layoutX="437.0" layoutY="14.0" prefHeight="25.0" prefWidth="249.0" text="Welcome : Teerayuth Artidakorn">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

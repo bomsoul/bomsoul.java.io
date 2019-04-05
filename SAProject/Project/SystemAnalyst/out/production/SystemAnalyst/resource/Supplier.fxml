@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SupplierController">
+   <children>
+      <ImageView fitHeight="522.0" fitWidth="738.0" layoutX="-36.0" layoutY="-21.0" opacity="0.24">
+         <image>
+            <Image url="@../Image/hos8.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableView" layoutX="41.0" layoutY="50.0" prefHeight="403.0" prefWidth="616.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="Supplier ID" />
+          <TableColumn fx:id="name" prefWidth="94.0" text="Company name" />
+            <TableColumn fx:id="phone" prefWidth="107.0" text="Phone" />
+            <TableColumn fx:id="fax" prefWidth="117.0" text="Fax" />
+            <TableColumn fx:id="address" prefWidth="222.0" text="Address" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="530.0" layoutY="14.0" onMouseClicked="#addSupplierBtn" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/addicon.png" />
+         </image>
+      </ImageView>
+      <Hyperlink layoutX="555.0" layoutY="15.0" onAction="#addSupplierBtn" text="Add New Supplier" textFill="#1b0000">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Hyperlink>
+      <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="41.0" layoutY="461.0" onMouseClicked="#toMenuBtn" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/back.png" />
+         </image>
+      </ImageView>
+      <Hyperlink layoutX="66.0" layoutY="462.0" onAction="#toMenuBtn" text="Menu" textFill="#1b0000">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

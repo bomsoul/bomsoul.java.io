@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StockProductController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="700.0" opacity="0.22">
+         <image>
+            <Image url="@../Image/hos6.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableView" layoutX="30.0" layoutY="42.0" prefHeight="410.0" prefWidth="375.0">
+        <columns>
+          <TableColumn fx:id="pid" prefWidth="75.0" text="Product ID" />
+          <TableColumn fx:id="pname" prefWidth="155.0" text="Product Name" />
+            <TableColumn fx:id="quan" prefWidth="57.0" text="Quantity" />
+            <TableColumn fx:id="prices" prefWidth="87.0" text="Price" />
+        </columns>
+      </TableView>
+      <Button fx:id="editstock" layoutX="161.0" layoutY="461.0" mnemonicParsing="false" onAction="#EditStockBtn" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #00FF66;" text="Edit Stock">
+         <font>
+            <Font name="Book Antiqua Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="quantity" layoutX="447.0" layoutY="279.0" />
+      <Label layoutX="447.0" layoutY="163.0" prefHeight="25.0" prefWidth="126.0" text="Product Name :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="RED" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="447.0" layoutY="254.0" prefHeight="25.0" prefWidth="126.0" text="Quantity :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="RED" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="447.0" layoutY="349.0" prefHeight="25.0" prefWidth="126.0" text="Price :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="RED" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="accept" layoutX="447.0" layoutY="427.0" mnemonicParsing="false" onAction="#AcceptBtn" text="Accept">
+         <font>
+            <Font name="Book Antiqua Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="warning" layoutX="418.0" layoutY="90.0" prefHeight="71.0" prefWidth="268.0" text="Quantity and Price must be Integer and greater than 0." textFill="#f20202">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="648.0" layoutY="42.0" onMouseClicked="#AddProductBtn" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/addicon.png" />
+         </image>
+      </ImageView>
+      <Hyperlink fx:id="newproduct" layoutX="537.0" layoutY="43.0" onAction="#AddProductBtn" prefHeight="27.0" prefWidth="119.0" text="Add New Product" textFill="#0a0000">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Hyperlink>
+      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="30.0" layoutY="10.0" onMouseClicked="#toMenuBtn" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/back.png" />
+         </image>
+      </ImageView>
+      <Hyperlink fx:id="newproduct1" layoutX="56.0" layoutY="10.0" onAction="#toMenuBtn" prefHeight="27.0" prefWidth="119.0" text="Back to Menu">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="RED" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Hyperlink>
+      <Label fx:id="productname" layoutX="447.0" layoutY="188.0" prefHeight="28.0" prefWidth="215.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="price" layoutX="447.0" layoutY="374.0" prefHeight="28.0" prefWidth="149.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

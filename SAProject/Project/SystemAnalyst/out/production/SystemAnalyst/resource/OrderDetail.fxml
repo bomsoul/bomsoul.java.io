@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.OrderDetailController">
+   <children>
+      <ImageView fitHeight="503.0" fitWidth="702.0" opacity="0.52">
+         <image>
+            <Image url="@../Image/hos2.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableView" layoutX="105.0" layoutY="36.0" prefHeight="436.0" prefWidth="564.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="72.0" text="Order ID" />
+            <TableColumn fx:id="customername" prefWidth="111.0" text="Customer Name" />
+          <TableColumn fx:id="name" prefWidth="239.0" text="Product Name" />
+            <TableColumn fx:id="quantity" prefWidth="62.0" text="Quantity" />
+            <TableColumn fx:id="status" prefWidth="79.0" text="Status" />
+        </columns>
+      </TableView>
+      <ToggleButton fx:id="all" layoutX="14.0" layoutY="58.0" mnemonicParsing="false" onAction="#allBtn" prefHeight="25.0" prefWidth="75.0" text="All" />
+      <ToggleButton fx:id="packed" layoutX="14.0" layoutY="96.0" mnemonicParsing="false" onAction="#packedBtn" prefHeight="25.0" prefWidth="75.0" text="Packed" />
+      <ToggleButton fx:id="unpacked" layoutX="14.0" layoutY="134.0" mnemonicParsing="false" onAction="#unpackedBtn" prefHeight="25.0" prefWidth="75.0" text="Unpacked" />
+      <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="14.0" layoutY="447.0" onMouseClicked="#BackBtn" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/back.png" />
+         </image>
+      </ImageView>
+      <Hyperlink fx:id="back" layoutX="39.0" layoutY="448.0" onAction="#BackBtn" text="Back" textFill="#110000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>
