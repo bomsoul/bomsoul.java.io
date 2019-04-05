@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ScheduleController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/bg.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="courseadd" layoutX="26.0" layoutY="195.0" promptText="course id" />
+      <TableView fx:id="scheduled" layoutX="205.0" layoutY="73.0" prefHeight="385.0" prefWidth="478.0">
+        <columns>
+          <TableColumn fx:id="courseid" prefWidth="75.0" text="Course ID" />
+          <TableColumn fx:id="coursetitle" prefWidth="332.0" text="Couse Title" />
+            <TableColumn fx:id="credit" prefWidth="70.0" text="Credit" />
+        </columns>
+      </TableView>
+      <Label layoutX="26.0" layoutY="155.0" prefHeight="33.0" prefWidth="141.0" text="Course ID:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="warning" layoutX="26.0" layoutY="258.0" prefHeight="137.0" prefWidth="170.0" />
+      <Button fx:id="add" layoutX="26.0" layoutY="410.0" mnemonicParsing="false" onAction="#addCourseBtn" prefHeight="25.0" prefWidth="60.0" text="Add" />
+      <Button fx:id="drop" layoutX="393.0" layoutY="466.0" mnemonicParsing="false" onAction="#DropBtn" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: #FF0000; -fx-text-fill: #FFFFFF;" text="Drop">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="mainpage" layoutX="616.0" layoutY="29.0" mnemonicParsing="false" onAction="#toMainPageBtn" text="Back" />
+   </children>
+</AnchorPane>

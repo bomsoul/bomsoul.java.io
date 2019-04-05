@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainPageController">
+   <children>
+      <Pane layoutY="49.0" prefHeight="51.0" prefWidth="700.0" style="-fx-background-color: green;">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="102.0" layoutX="14.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/Logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="208.0" layoutY="6.0" prefHeight="40.0" prefWidth="357.0" text="Computer Science Kasetsard University" textFill="#f2efef">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fitHeight="51.0" fitWidth="54.0" layoutX="646.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/KU_Logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="curiculum" layoutX="126.0" layoutY="238.0" mnemonicParsing="false" onAction="#toCuriculumPageBtn" prefHeight="85.0" prefWidth="110.0" text="Curiculum" />
+      <Button fx:id="Grade" layoutX="464.0" layoutY="238.0" mnemonicParsing="false" onAction="#toCalculateGradeBtn" prefHeight="85.0" prefWidth="110.0" text="Calculate Grade" />
+      <Button fx:id="schedule" layoutX="293.0" layoutY="238.0" mnemonicParsing="false" onAction="#toScheduleBtn" prefHeight="85.0" prefWidth="110.0" text="Schedule" />
+      <Hyperlink fx:id="info" layoutX="592.0" layoutY="14.0" onAction="#toNisitInfoLink" prefHeight="28.0" prefWidth="80.0" text="Nisit Info" textFill="#635f94">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Hyperlink>
+      <Button fx:id="logout" layoutX="22.0" layoutY="448.0" mnemonicParsing="false" onAction="#toLoginPageBtn" text="Logout" />
+   </children>
+</AnchorPane>

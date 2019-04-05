@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InfoController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/info.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image" fitHeight="180.0" fitWidth="180.0" layoutX="493.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="name" layoutX="68.0" layoutY="206.0" prefHeight="44.0" prefWidth="575.0" text="Name :">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="id" layoutX="68.0" layoutY="277.0" prefHeight="44.0" prefWidth="320.0" text="ID :">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="44.0" fitWidth="48.0" layoutX="649.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/KU_Logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="mainpage" layoutX="34.0" layoutY="442.0" mnemonicParsing="false" onAction="#toMainPageBtn" prefHeight="25.0" prefWidth="72.0" text="Back" />
+   </children>
+</AnchorPane>

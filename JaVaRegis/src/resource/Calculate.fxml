@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CalculateController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/gradeBG.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="15.0" layoutY="38.0" prefHeight="25.0" prefWidth="74.0" text="Course ID :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="268.0" layoutY="38.0" prefHeight="25.0" prefWidth="56.0" text="Grade :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="gradeguess" layoutX="324.0" layoutY="38.0" prefHeight="25.0" prefWidth="65.0" />
+      <Button fx:id="add" layoutX="451.0" layoutY="38.0" mnemonicParsing="false" onAction="#addBtn" text="Calculate" />
+      <TableView fx:id="tableView" layoutX="31.0" layoutY="87.0" prefHeight="370.0" prefWidth="483.0">
+        <columns>
+          <TableColumn fx:id="courseid" prefWidth="75.0" text="Course ID" />
+          <TableColumn fx:id="coursename" prefWidth="279.0" text="Course Title" />
+            <TableColumn fx:id="credit" prefWidth="62.0" text="Credit" />
+            <TableColumn fx:id="grade" prefWidth="68.0" text="Grade" />
+        </columns>
+      </TableView>
+      <Label layoutX="526.0" layoutY="358.0" prefHeight="25.0" prefWidth="56.0" text="Point :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="526.0" layoutY="391.0" prefHeight="25.0" prefWidth="56.0" text="Credit :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="remove" layoutX="526.0" layoutY="423.0" prefHeight="25.0" prefWidth="95.0" text="Average GPAX:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="mainpage" layoutX="621.0" layoutY="38.0" mnemonicParsing="false" onAction="#toMainPageBtn" text="Back" />
+      <ImageView fitHeight="41.0" fitWidth="28.0" layoutX="662.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/KU_Logo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="totalpoint" layoutX="606.0" layoutY="358.0" prefHeight="25.0" prefWidth="56.0" text="0.00" textAlignment="RIGHT">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalcredit" layoutX="606.0" layoutY="391.0" prefHeight="25.0" prefWidth="56.0" text="0.00" textAlignment="RIGHT">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="gpax" layoutX="621.0" layoutY="423.0" prefHeight="25.0" prefWidth="41.0" text="0.00" textAlignment="RIGHT">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="remover" layoutX="238.0" layoutY="461.0" mnemonicParsing="false" onAction="#removeBtn" text="Remove" />
+      <Label fx:id="warning" layoutX="533.0" layoutY="121.0" prefHeight="99.0" prefWidth="157.0" text="please enter course ID" textFill="#f50505">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="course" layoutX="89.0" layoutY="38.0" promptText="Course ID" />
+   </children>
+</AnchorPane>
