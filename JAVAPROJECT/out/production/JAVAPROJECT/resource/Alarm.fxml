@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AlarmController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="300.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/bg1.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutY="-3.0" prefHeight="117.0" prefWidth="301.0" style="-fx-background-color: #696969;">
+         <children>
+            <Pane layoutX="94.0" layoutY="85.0" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #FF9966;">
+               <children>
+                  <Label fx:id="clock" layoutX="25.0" layoutY="-1.0" prefHeight="27.0" prefWidth="72.0" text="10:10:10">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label fx:id="warning" layoutX="14.0" layoutY="12.0" prefHeight="27.0" prefWidth="269.0" text="Please Select row to set alarm." textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button fx:id="setAlarm" layoutX="218.0" layoutY="44.0" mnemonicParsing="false" onAction="#addBtn" style="-fx-background-color: White;" text="setAlarm" />
+      <Button fx:id="back" layoutX="35.0" layoutY="352.0" mnemonicParsing="false" onAction="#backBtn" style="-fx-background-color: White;" text="back" />
+      <TableView fx:id="Alarm" layoutY="113.0" opacity="0.5" prefHeight="226.0" prefWidth="300.0">
+        <columns>
+          <TableColumn fx:id="h" prefWidth="127.0" text="Hour" />
+          <TableColumn fx:id="m" prefWidth="112.0" text="Minute" />
+            <TableColumn fx:id="alert" prefWidth="60.0" text="Alarm" />
+        </columns>
+      </TableView>
+      <ChoiceBox fx:id="hour" layoutX="14.0" layoutY="44.0" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: White;" />
+      <ChoiceBox fx:id="minut" layoutX="114.0" layoutY="44.0" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: White;" />
+      <Label layoutX="97.0" layoutY="43.0" prefHeight="27.0" prefWidth="9.0" text=":">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="remove" layoutX="121.0" layoutY="352.0" mnemonicParsing="false" onAction="#removeBtn" style="-fx-background-color: White;" text="Remove" />
+      <Button fx:id="alarm" layoutX="224.0" layoutY="352.0" mnemonicParsing="false" onAction="#alarmBtn" style="-fx-background-color: White;" text="Alarm" />
+   </children>
+</AnchorPane>
